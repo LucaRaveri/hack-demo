@@ -25,7 +25,7 @@ export default function Home() {
   
         // Dopo aver ottenuto il sessionID, invia il primo messaggio
         const requestBody = {
-          text: "Ciao Jerry è uno studente dell'H-fam. Vorrebbe lavorare su un progetto di digital management, ne esiste qualcuno in H-farm?",
+          text: "Ciao, sono Jerry",
         };
   
         axios
@@ -88,6 +88,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       {!chatActive ? (
+        <div className="flex-grow p-4 border border-gray-300 bg-white">
         <button
           onClick={startChat}
           className="p-4 bg-blue-500 text-white rounded hover:bg-blue-600"
@@ -95,6 +96,7 @@ export default function Home() {
         >
           Avvia la chat
         </button>
+        </div>
       ) : (
         <>
           <div className="flex-grow p-4 border border-gray-300 bg-white">
